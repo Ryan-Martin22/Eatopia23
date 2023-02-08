@@ -28,3 +28,18 @@ class Recipe_model(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='recipe_likes',
                                    blank=True)
+
+    class Meta:
+        """
+        Order the recipes in descending order
+        """
+        ordering = ['-created_on']
+
+    def __str__(self):
+        return self.title
+
+    def number_of_likes(self):
+        """
+        Returns the number of likes on a post
+        """
+        return self.likes.count()
