@@ -1,9 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.validators import MaxValueValidator, MinValueValidator
+from django_summernote.fields import SummernoteTextField
 from cloudinary.models import CloudinaryField
 
 STATUS = ((0, 'Draft'), (1, 'Published'))
-
 
 class Recipe_model(models.Model):
     """
@@ -49,7 +50,7 @@ class Comment(models.Model):
     """
     Model for comment
     """
-    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE,
+    recipe = models.ForeignKey(Recipe_model, on_delete=models.CASCADE,
                               related_name="comments")
     author = models.ForeignKey(User, on_delete=models.CASCADE,
                                related_name='author_comments')
