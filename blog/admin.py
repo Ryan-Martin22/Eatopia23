@@ -1,11 +1,9 @@
 from django.contrib import admin
-from .models import Recipe_model
+from .models import RecipeModel
 from django_summernote.admin import SummernoteModelAdmin
 
 
-@admin.register(Recipe_model)
+@admin.register(RecipeModel)
 class Admin(SummernoteModelAdmin):
-    
-    summernote_fields = ('content')
-
-
+   
+    summernote_fields = ('ingredients_list', 'instructions')
