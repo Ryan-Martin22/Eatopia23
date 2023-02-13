@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- Recipe Entries Column -->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+            {% for recipemodel in recipe_list %}
+                <div class="col-md-4">
+                    <div class="card-mb-4">
+                        <div class="card-body">
+                            <div class="image-container">
+                                {% if "placeholder" in recipemodel.featured_image.url %}
+                                <img class="card-img-top"
+                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ recipemodel.featured_image.url }}">
+                                {% endif %}
+                                <div class="image-flash">
+                                    <p class="author">Author: {{ recipemodel.author }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+
+            {% if forloop.counter|divisibleby:3 %}
+            </div> 
+            <div class="row">
+            {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{%endblock%}
