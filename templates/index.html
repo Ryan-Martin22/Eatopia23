@@ -23,7 +23,7 @@
                                     <p class="author">Author: {{ recipemodel.author }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="post-link">
+                            <a href="{% url 'recipe_detail' recipemodel.slug %}" class="post-link">
                                 <h2 class="card-title">{{ recipemodel.title }}</h2>
                                 <p class="card-text">{{ recipemodel.excerpt }}</p>
                             </a>
