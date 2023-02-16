@@ -37,6 +37,31 @@
         </div>
     </div>
     <hr class="block-divider">
+
+    <div class="row">
+        <div class="col-1">
+            <strong>
+                {% if user.is_authenticated %}
+                <form class="d-inline" action="{% url 'recipe_like' recipemodel.slug %}" method="POST">
+                    {% csrf_token %}
+                    {% if liked %}
+                    <button type="submit" name="recipe_id" value="{{ recipemodel.slug }}" class="btn btn-md"><i
+                            class="fas fa-heart"></i>
+                        {{ recipe.amount_of_likes }} </button>
+                    {% else %}
+                    <button type="submit" name="recipe_id" value="{{ recipemodel.slug }}" class="btn btn-md"><i
+                            class="far fa-heart"></i>
+                        {{ recipemodel.amount_of_likes }}</button>
+
+                    {% endif %}
+                </form>
+                {% else %}
+                <span class="text-secondary"><i class="fas fa-heart"></i></span>
+                {% endif %}
+                <span class="text-secondary">{{ recipemodel.number_of_likes }}</span>
+            </strong>
+        </div>
+    </div>
     
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
