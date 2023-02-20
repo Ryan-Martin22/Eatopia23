@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
+from django.template.defaultfilters import slugify
 from django_summernote.fields import SummernoteTextField
 from cloudinary.models import CloudinaryField
 
@@ -24,8 +25,8 @@ class RecipeModel(models.Model):
                                                    MinValueValidator(1),
                                                    MaxValueValidator(120)
                                                    ])
-    ingredients_list = models.TextField()
-    instructions = models.TextField()
+    ingredients_list = SummernoteTextField()
+    instructions = SummernoteTextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='recipe_likes',

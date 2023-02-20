@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load cloudinary %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<div class="container">
+    <h1>Add a delicious recipe!!</h1>
+    <div class="row">
+        <div class="col mt-3 mb-5">
+            <form action="{% url 'addrecipe' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-6">
+                        {{ recipe_form.title|as_crispy_field }}
+                    </div>
+                    <div class="col-6">
+                        {{ recipe_form.cooking_time|as_crispy_field }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        {{ recipe_form.excerpt|as_crispy_field }}
+                    </div>
+                </div>
+                <div class="row">
+                    {{ recipe_form.ingredients_list|as_crispy_field|safe }}
+                </div>
+                <div class="row">
+                    {{ recipe_form.instructions|as_crispy_field|safe }}
+                </div>
+                <div class="row">
+                    {{ recipe_form.featured_image|as_crispy_field }}
+                    <p>If no image is uploaded a default image will be displayed</p>
+                </div>
+                <button type="submit" class="add-recipe-button">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="container">
+    <p>Please <a href="{% url 'account_signup' %}"> Sign up or <a href="{% url 'account_login' %}"> Login to share a
+                recipe!</a></p>
+</div>
+{% endif %}
+
+{% endblock %}

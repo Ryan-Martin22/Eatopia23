@@ -1,8 +1,10 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import redirect, render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 from .models import RecipeModel
 from .forms import CommentForm
+from .forms import AddRecipeForm 
 
 
 class RecipeModelList(generic.ListView):
@@ -64,6 +66,27 @@ class RecipeDetail(View):
                 "comment_form": CommentForm(),
             },
         )
+        
+@login_required
+def add_recipe(request):
+    """
+    Add recipe page
+    """
+    recipe_form = AddRecipeForm()
+    print(request.method)
+    if request.method == "POST":
+        recipe_form = AddRecipeForm(request.POST, request.FILES)
+        print(recipe_form.is_valid())
+        if recipe_form.is_valid():
+            recipe_form = recipe_form.save(commit=False)
+            recipe_form.title = recipe_form.title.title()
+            recipe_form.author = request.user
+            recipe_form.status = 1
+            recipe_form.save()
+            return redirect('home')
+
+    return render(request, 'add_recipe.html', context={'recipe_form':
+                  recipe_form})
         
         
 class RecipeLike(View):
