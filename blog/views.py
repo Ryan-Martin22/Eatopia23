@@ -26,7 +26,7 @@ class RecipeDetail(View):
             request,
             "recipe_detail.html",
             {
-                "recipe": recipemodel,
+                "recipemodel": recipemodel,
                 "comments": comments,
                 "commented": False,
                 "liked": liked,
@@ -57,7 +57,7 @@ class RecipeDetail(View):
             request,
             "recipe_detail.html",
             {
-                "recipe": recipemodel,
+                "recipemodel": recipemodel,
                 "comments": comments,
                 "commented": True,
                 "liked": liked,
