@@ -66,6 +66,7 @@ class RecipeDetail(View):
                 "comment_form": CommentForm(),
             },
         )
+   
         
 @login_required
 def add_recipe(request):

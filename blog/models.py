@@ -46,6 +46,10 @@ class RecipeModel(models.Model):
         Returns the number of likes on a post
         """
         return self.likes.count()
+    
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        return super().save(*args, **kwargs)
 
 
 class Comment(models.Model):
