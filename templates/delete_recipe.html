@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load cloudinary %}
+
+
+{% block content %}
+
+<div class="container">
+    {% if request.user == recipemodel.author %}
+    <div class="row mt-5">
+        <div class="col-md-3 col-sm-6">
+            <a href="{% url 'recipe_detail' recipemodel.slug %}" class="btn btn-light">Back to Eatopia</a>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-5 col-sm-12">
+            <h5>Are You Sure?</h5>
+            <p>You are about to delete this post, this cannot be undone.</p>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    {% else %}
+    <p>You are not authorized to visit this page.</p>
+    <div class="container text-center">
+        <a href="{% url 'home' %}" class="back-button btn-default">Back</a>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}

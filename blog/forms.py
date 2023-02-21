@@ -16,7 +16,6 @@ class AddRecipeForm(forms.ModelForm):
             'instructions',
             'featured_image',
         ]
-    
        
     def __init__(self, *args, **kwargs):
         super(AddRecipeForm, self).__init__(*args, **kwargs)

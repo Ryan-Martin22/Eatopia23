@@ -2,6 +2,8 @@ from django.shortcuts import redirect, render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
+from django.urls import reverse_lazy
+from django.views.generic.edit import UpdateView, DeleteView
 from .models import RecipeModel
 from .forms import CommentForm
 from .forms import AddRecipeForm 
@@ -103,3 +105,23 @@ class RecipeLike(View):
             recipemodel.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
+    
+    
+class UpdateRecipeView(UpdateView):
+    """
+    Edit recipe
+    """
+    model = RecipeModel
+    form_class = AddRecipeForm
+    template_name_suffix = '_update_form'
+    template_name = 'update_recipe.html'
+    success_url = '/'
+
+
+class DeleteRecipeView(DeleteView):
+    """
+    Delete Recipe
+    """
+    model = RecipeModel
+    template_name = 'delete_recipe.html'
+    success_url = reverse_lazy('home')

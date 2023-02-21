@@ -108,6 +108,21 @@
         </div>
     </div>
 
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-6">
+                {% if request.user == recipemodel.author %}
+                <h5>Manage your recipe:</h5>
+                <strong>{{ recipemodel.author }}</strong> - {{ recipemodel.title }}
+                <p class="edit-delete"><a href="{% url 'recipe_edit' recipemodel.slug %}"><button
+                            class="btn btn-success edit-recipe"><i class="fa fa-edit"></i> | Edit</button></i></a>
+                    <a href="{% url 'recipe_delete' recipemodel.slug %}"><button class="btn btn-danger"><i
+                                class="fa fa-trash"></i> | Delete</button></a></p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
 <div class="container text-center">
     <br /><br />
     <a href="{% url 'home' %}" class="back-button btn-default">Back</a>

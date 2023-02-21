@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load cloudinary %}
+
+
+{% block content %}
+
+<div class="container">
+    {% if request.user == recipemodel.author %}
+    <div class="row mt-5">
+        <div class="col-md-3 col-sm-6">
+            <a href="{% url 'recipe_detail' recipemodel.slug %}" class="btn btn-light">Back to Feed</a>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-5 col-sm-12">
+            <h5>Update Your Recipe</h5>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-3 mb-5">
+        <div class="col-md-5 col-sm-12">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="d-grid gap-2">
+                    <input type="submit" class="btn btn-success mt-3" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+    {% else %}
+    <p>You are not authorized to visit this page.</p>
+    <div class="container text-center">
+        <a href="{% url 'home' %}" class="back-button btn-default">Back</a>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}
