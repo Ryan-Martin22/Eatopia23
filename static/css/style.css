@@ -175,3 +175,7 @@ body {
     background: transparent;
     border: none;
 }
+
+.fab {
+    color: #f3e6e6;
+}
