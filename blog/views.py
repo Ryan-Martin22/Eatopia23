@@ -125,3 +125,9 @@ class DeleteRecipeView(DeleteView):
     model = RecipeModel
     template_name = 'delete_recipe.html'
     success_url = reverse_lazy('home')
+    
+def about(request):
+    """
+    Renders about page
+    """
+    return render(request, 'about.html')

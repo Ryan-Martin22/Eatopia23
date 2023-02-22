@@ -4,6 +4,7 @@ from .views import DeleteRecipeView, UpdateRecipeView
 
 urlpatterns = [
     path("", views.RecipeModelList.as_view(), name="home"),
+    path('about/', views.about, name='about'),
     path('detail/<slug:slug>/', views.RecipeDetail.as_view(), name='recipe_detail'),
     path('like/<slug:slug>', views.RecipeLike.as_view(), name='recipe_like'),
     path('addrecipe/', views.add_recipe, name='addrecipe'),
