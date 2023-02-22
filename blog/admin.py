@@ -15,10 +15,7 @@ class Admin(SummernoteModelAdmin):
        
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('author', 'body', 'recipe', 'created_on', 'approved')
-    list_filter = ('author', 'approved', 'created_on')
+    list_display = ('author', 'body', 'recipe', 'created_on',)
+    list_filter = ('author', 'created_on')
     search_fields = ('author', 'body')
-    actions = ['approve_comments']
     
-    def approve_comments(self, request, queryset):
-        queryset.update(approved=True)
