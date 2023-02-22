@@ -6,12 +6,12 @@
     <div class="row">
 
         <!-- Recipe Entries Column -->
-        <div class="col-12 mt-3 left">
-            <div class="row">
+        <div class="col-12 mt-3 left recipe-list">
+            <div class="row mb-3">
             {% for recipemodel in recipemodel_list %}
                 <div class="col-md-4">
-                    <div class="card-mb-4">
-                        <div class="card-body">
+                    <div class="card-sm-4">
+                        <div class="card card-body text-center h-100">
                             <div class="image-container">
                                 {% if "placeholder" in recipemodel.featured_image.url %}
                                 <img class="card-img-top"
@@ -25,8 +25,8 @@
                             </div>
                            
                             <a href="{% url 'recipe_detail' recipemodel.slug %}" class="post-link">
-                                <h2 class="card-title">{{ recipemodel.title }}</h2>
-                                <p class="card-text">{{ recipemodel.excerpt }}</p>
+                                <h2>{{ recipemodel.title }}</h2>
+                                <p>{{ recipemodel.excerpt }}</p>
                             </a>
                             <hr />
                             <p class="card-text text-muted h6">{{ recipemodel.created_on}} <i class="far fa-heart"></i>
