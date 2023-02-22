@@ -29,6 +29,27 @@ body {
     background-color: #F9FAFC;
 }
 
+.callout-container {
+    height: 50vh;
+    background: url(https://res.cloudinary.com/dvfyeucsp/image/upload/v1677081853/backround_goo3pz.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.jumbotron {
+    background: hsl(0, 2%, 83%);
+    padding: 0.5rem;
+    border-radius: 25px;
+}
+
 .card {
     border: none;
     background-color: transparent;

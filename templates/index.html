@@ -2,8 +2,30 @@
 
 {% block content %}
 
+<div class="container-fluid callout-container">
+    <div class="row">
+        <div class="col-12">
+            <section class="callout jumbotron text-center">
+                <h1>Eatopia!</h1>
+                <p>A Utopia for all Foodies to share their recipes!</p>
+            </section>
+        </div>
+    </div>
+</div>
+
 <div class="container-fluid">
     <div class="row">
+        <div class="col text-center mt-3">
+            {% if user.is_authenticated %}
+            <h2>Welcome {{ user.username }}!</h2>
+            <p>Let's explore Eatopia!<br>Share your own recipes, comment other recipes and explore 
+            the wonderful world of food!</p>
+            {% else %}
+            <h2>Welcome to Eatopia</h2>
+            <h3>To share your own recipes, please <a href="{% url 'account_login' %}">
+                    Login</a> or <a href="{% url 'account_signup' %}">Register</a> to create an account!</h3>
+            {% endif %}
+        </div>
 
         <!-- Recipe Entries Column -->
         <div class="col-12 mt-3 left recipe-list">
