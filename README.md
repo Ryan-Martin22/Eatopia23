@@ -38,6 +38,36 @@ My goal for this site were to create a user friendly website were people can get
 * As Admin I can create, read, update and delete posts so that I can manage my content.
 * As Admin I can delete recipes if inappropiate so that the content of the site is relevant.
 
+**Design Goals**
+
+* A site that works on all devices. 
+* Clean and sophisticated design to enhance user experience. 
+* Easy to understand and use.
+* The style aims to give the user such a good experience that they will want to visit the site again. 
+
+**Design Choices**
+
+* Font
+
+As Font I chose Roboto for all my headings for its simple but yet stylish design. To keep the site neat I chose to use Lato for all other text on the site. 
+font-family: 'Roboto', serif;
+font-family: 'Lato', sans-serif;
+
+* Color Scheme
+
+For the colour scheme I kept it very simple, I used mainly white and light grey. The font is black so it is easily read. As the site with feature a lot of food images I wanted the images to stand out and be the main eye-catcher. When viewing the site i wanted the food to be the main attraction.
+
+- background-color: #F9FAFC;
+- background-color: #fff;
+- Black: #000000 
+
+![Logo](/static/images/eatopia_logo.png)
+ 
+* Logo Eatopia
+
+I used [canva.com](https://www.canva.com/) to create my logo. I wanted a clean logo that goes well with the content of the site. I wanted a read heart to symbolise the love for food. 
+
+
 
 
 
