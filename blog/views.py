@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 from django.views.generic.edit import UpdateView, DeleteView
 from .models import RecipeModel
 from .forms import CommentForm
-from .forms import AddRecipeForm 
+from .forms import AddRecipeForm
 
 
 class RecipeModelList(generic.ListView):
@@ -17,7 +17,7 @@ class RecipeModelList(generic.ListView):
 
 
 class RecipeDetail(View):
-    
+
     def get(self, request, slug, *args, **kwargs):
         queryset = RecipeModel.objects.filter(status=1)
         recipemodel = get_object_or_404(queryset, slug=slug)
@@ -25,7 +25,7 @@ class RecipeDetail(View):
         liked = False
         if recipemodel.likes.filter(id=self.request.user.id).exists():
             liked = True
-        
+
         return render(
             request,
             "recipe_detail.html",
@@ -37,7 +37,7 @@ class RecipeDetail(View):
                 "comment_form": CommentForm(),
             },
         )
-        
+
     def post(self, request, slug, *args, **kwargs):
         queryset = RecipeModel.objects.filter(status=1)
         recipemodel = get_object_or_404(queryset, slug=slug)
@@ -45,9 +45,9 @@ class RecipeDetail(View):
         liked = False
         if recipemodel.likes.filter(id=self.request.user.id).exists():
             liked = True
-        
+
         comment_form = CommentForm(data=request.POST)
-        
+
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
             comment.recipe = recipemodel
@@ -68,8 +68,8 @@ class RecipeDetail(View):
                 "comment_form": CommentForm(),
             },
         )
-   
-        
+
+
 @login_required
 def add_recipe(request):
     """
@@ -90,8 +90,8 @@ def add_recipe(request):
 
     return render(request, 'add_recipe.html', context={'recipe_form':
                   recipe_form})
-        
-        
+
+
 class RecipeLike(View):
     """
     Likes
@@ -105,8 +105,8 @@ class RecipeLike(View):
             recipemodel.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
-    
-    
+
+
 class UpdateRecipeView(UpdateView):
     """
     Edit recipe
@@ -125,8 +125,8 @@ class DeleteRecipeView(DeleteView):
     model = RecipeModel
     template_name = 'delete_recipe.html'
     success_url = reverse_lazy('home')
-    
-    
+
+
 def about(request):
     """
     Renders about page
