@@ -150,7 +150,43 @@ This would allow users to upload videos of themselves actually cooking the recip
 
   **Solution** - After troublehooting and being unable to determine the cause, I reached out to the Tutor team and Rebecca informed me that there was an issue with Crispy Forms 2.0. I then downgraded to a previous version of Crispy Forms and this resolved the error.  
 
-* **Known Bug** - If a user creates a recipe that has the same name of another recipe then an error will be thrown. This is because the slug is generated from the recipe title. To fix this in the future I will research how to make a user create a unique recipe title and in doing so have a uniwue slug, this would prevent the error from occuring. 
+* **Known Bug** - If a user creates a recipe that has the same name of another recipe then an error will be thrown. This is because the slug is generated from the recipe title. To fix this in the future I will research how to make a user create a unique recipe title and in doing so have a uniwue slug, this would prevent the error from occuring.
+
+
+## **Technology Used**
+
+### Main Languages Used
+- [HTML5](https://en.wikipedia.org/wiki/HTML5 "Link to HTML Wiki")
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets "Link to CSS Wiki")
+
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript "Link to JavaScript Wiki")
+     - Used to implement the Summernote feature that allowed the user to add styling to the recipe in the form.
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language) "Link to Python Wiki")
+     - Used to implement Django functionality, including building models, forms and views for the app.
+
+### Frameworks, Libraries & Programs Used
+- [Django](https://www.djangoproject.com/ "Link to Django Project website")
+    - Django was used to build the models, forms and views of the app, and was the backbone of this project.
+- [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/ "Link to Bootstrap page")
+     - Bootstrap was used to implement the responsiveness of the site, using bootstrap classes, but also other styling such as buttons etc.
+- [Cloudinary](https://cloudinary.com/ "Link to Cloudinary page")
+     - Cloudinary was used as free cloud storage for images uploaded to the site through the recipe forms.
+- [Summernote](https://summernote.org "Link to Summernote page")
+     - Summernote was used to allow users to add styling when adding a recipe to the site. This is particularly useful for using bullet points for ingredients or numbering the steps for the recipe.
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/ "Link to the Crispy Forms documentation")
+    - Crispy Forms was used to style the add and edit recipe forms, allowing more than one field to occupy a line on the form.
+- [Google Fonts](https://fonts.google.com/ "Link to Google Fonts")
+    - Google fonts were used to import the fonts "Roboto" and "Lato" into the style.css file. These fonts were used throughout the project.
+- [Font Awesome](https://fontawesome.com/ "Link to FontAwesome")
+     - Font Awesome was used on all pages throughout the website to import icons (e.g. social media icons) for UX purposes.
+- [Git](https://git-scm.com/ "Link to Git homepage")
+     - Git was used for version control by utilizing the GitPod terminal to commit to Git and push to GitHub.
+- [GitHub](https://github.com/ "Link to GitHub")
+     - GitHub was used to store the project after pushing
+- [Am I Responsive?](http://ami.responsivedesign.is/# "Link to Am I Responsive Homepage")
+     - Am I Responsive was used to see responsive design throughout the process and to generate mockup imagery to be used.
+- [Balsamiq Wireframes](https://balsamiq.com/learn/articles/what-are-wireframes/ "Link to Balsamiq Wireframes")
+     - Balsamiq Wireframes was used to create the wireframes for the project.
 
 
 
