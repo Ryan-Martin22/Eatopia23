@@ -91,7 +91,41 @@ Wireframes were used using Balsamiq Wireframes. The aim was to get a basic layou
 
 ![Site Map](/static/images/Site-map.png)
 
+# Features #
 
+## Design Features 
+
+### Header
+* The header contains the Navigation Bar which remains present on all pages of the site. The Eatopia logo is also located to the left of the Navigation Bar, clicking on the logo will take you back to the home page of the site. Page links are located on the navigation bar and these change depending on whether the user is logged in or logged out. For smaller devices the nabigation bar transforms into a Burger Button which contains the page links. 
+
+### Home Page 
+* When visiting the site you are greeted by an image of food and a jumbotron message. Below the image is a prompt for the site user to either login or register on the site. If you are logged in already then the user will be greeted with thier username. 
+
+### Footer
+ * The footer is basic and simple as to not distract from the main home page. It contains copyright information and icon links to various social media pages. 
+
+## Existing features
+
+* **Header Logo** appears on every page for consistency and easy navigation, clicking the logo takes you back to the home page. 
+* **Header Nav-Bar** appears on every page for consistency and easy navigation, the Nav-Bar toggles on smaller screens for better user experience. The Nav-Bar presents different links if the user is logged in or not.  
+* **Home Page Image** is to greet the site user and instantly provide the purpose of the site. 
+* **Home Page Welcome Text** is to give immediate guidance to the site user. If the user is logged in they will be greated by their username, if not there are links to Login/Register an account. 
+* **Recipe Cards** are presented on the home page. The cards are paginated by six, i.e if there are more than six recipes on the site they will be displayed on another site. Arrows will point the user in the right direction for good user experience. The cards hold information of the recipe title, author, created on, number of likes and an image. If the user has not chosen a specifik image a placeholder image will be displayed. 
+* **Recipe Form** can be used by logged in users. Here users who holds an account can add their own recipes, and also edit their own recipes. 
+* **Comment Form** is displayed underneath each recipe when viewed in full. Logged in users can comment recipes. 
+* **Comment Section** is where all users, logged in or not can read all comments, who wrote them and when. 
+* **Like/Unlike Button** appears on the recipe site and all logged in users can like/unlike recipes. Number of likes are also displayed for all users to see. 
+* **About Page** gives the user information about the topic of the site. 
+* **Recipe Page** is displayed when clicked on a recipe. Here all users, logged in or not, can view details about the recipe. This page also includes features to like and comment if you are a logged in user. If you are the author of the recipe, from here you can be redirected to edit/delete your recipe.  
+* **Edit/Delete recipe** is where the creator of the recipe can edit and/or delete their own recipes. 
+* **Login Page** here users who already have created an account can log in. Users can also choose to be "remembered", a feature so that they do not have to enter their login credentials each time they log in. 
+* **Register Page** is where new users can create a new account so that they can interact with the site. By creating a username, providing optional email and a required password an account is easily created. 
+* **Logout** is a page for the user to confirm their wish to log out of their account. If the user clicks the sign out button, they are then redirected to the home page.
+
+
+
+    
+    
 
 
 
