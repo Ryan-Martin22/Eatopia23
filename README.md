@@ -368,6 +368,41 @@ This would allow users to upload videos of themselves actually cooking the recip
 * Result: When clicking Logout the user is redirected to Logout page and asked to confirm that they wish to log out. When Log Out button is clicked the user is logged out and redirected to home page. 
 * Verdict: Code functions as intended.
 
+## Automated Testing
+
+### Code Validation
+
+The [W3C Markup Validator](https://validator.w3.org/) service was used to validate the HTML and CSS code used. The [PEP8 Python Validator](http://pep8online.com/) was used to validate the Python code. 
+
+#### Results:
+
+* HTML Validation - all pages clear
+
+* CCS Validation - page clear 
+
+* Python Validation - all pages clear
+
+Files tested: 
+*Blog*
+* admin.py
+* apps.py
+* forms.py
+* models.py
+* urls.py
+* views.py
+*Eatopia*
+* setting.py
+* urls.py
+
+### Browser Validation
+
+The site has been tested using the following browsers:
+
+* Chrome
+* Firefox
+* Edge
+* Safari
+
 
 ## **Bugs**
 
