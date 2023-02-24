@@ -81,6 +81,20 @@ Wireframes were used using Balsamiq Wireframes. The aim was to get a basic layou
 
 ![Login](/static/images/wireframe_5.png)
 
+## Information Architecture ##
+
+* Database Models 
+
+![Entity Relationship Diagram](/static/images/erd.png)
+
+* Site Map 
+
+![Site Map](/static/images/Site-map.png)
+
+
+
+
+
 
 
 
