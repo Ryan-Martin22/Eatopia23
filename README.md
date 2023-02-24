@@ -65,7 +65,21 @@ For the colour scheme I kept it very simple, I used mainly white and light grey.
  
 * Logo Eatopia
 
-I used [canva.com](https://www.canva.com/) to create my logo. I wanted a clean logo that goes well with the content of the site. I wanted a read heart to symbolise the love for food. 
+I used [canva.com](https://www.canva.com/) to create my logo. I wanted a clean logo that goes well with the content of the site. I wanted a red heart to symbolise the love for food. 
+
+**Wireframes**
+
+Wireframes were used using Balsamiq Wireframes. The aim was to get a basic layout of all the componets to help me in the design process. 
+
+![Home](/static/images/wireframe_1.png)
+
+![About](/static/images/wireframe_2.png)
+
+![Add Recipe](/static/images/wireframe_3.png)
+
+![Register](/static/images/wireframe_4.png)
+
+![Login](/static/images/wireframe_5.png)
 
 
 
