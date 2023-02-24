@@ -150,6 +150,8 @@ This would allow users to upload videos of themselves actually cooking the recip
 
   **Solution** - After troublehooting and being unable to determine the cause, I reached out to the Tutor team and Rebecca informed me that there was an issue with Crispy Forms 2.0. I then downgraded to a previous version of Crispy Forms and this resolved the error.  
 
+* **Known Bug** - If a user creates a recipe that has the same name of another recipe then an error will be thrown. This is because the slug is generated from the recipe title. To fix this in the future I will research how to make a user create a unique recipe title and in doing so have a uniwue slug, this would prevent the error from occuring. 
+
 
 
 
