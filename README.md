@@ -188,6 +188,66 @@ This would allow users to upload videos of themselves actually cooking the recip
 - [Balsamiq Wireframes](https://balsamiq.com/learn/articles/what-are-wireframes/ "Link to Balsamiq Wireframes")
      - Balsamiq Wireframes was used to create the wireframes for the project.
 
+### Deploying on Heroku
+To deploy this page to Heroku from its GitHub repository, the following steps were taken:
+
+1. Create the Heroku App:
+    - Select "Create new app" in Heroku.
+    - Choose a name for your app and select the location.
+
+2. Attach the ElephantSQL postgres database:
+    - Create an Instance in ElephantSQL.
+    - Copy the URL and paste it into env.py.
+
+3. Prepare the environment and settings.py file:
+    - In the Settings tab, click on Reveal Config Vars and copy the url next to DATABASE_URL.
+    - In your GitPod workspace, create an env.py file in the main directory. 
+    - Add the DATABASE_URL value and your chosen SECRET_KEY value to the env.py file.
+    - Add the SECRET_KEY value to the Config Vars in Heroku.
+    - Update the settings.py file to import the env file and add the SECRETKEY and DATABASE_URL file paths.
+    - Update the Config Vars with the Cloudinary url, adding into the settings.py file also.
+    - In settings.py add the following sections:
+        - Cloudinary to the INSTALLED_APPS list
+        - STATICFILE_STORAGE
+        - STATICFILES_DIRS
+        - STATIC_ROOT
+        - MEDIA_URL
+        - DEFAULT_FILE_STORAGE
+        - TEMPLATES_DIR
+        - Update DIRS in TEMPLATES with TEMPLATES_DIR
+        - Update ALLOWED_HOSTS with ['app_name.heroku.com', 'localhost']
+
+4. Store Static and Media files in Cloudinary:
+    - Create three directories in the main directory; media, static and templates.
+    - Create a file named "Procfile" in the main directory and add the following:
+        - web: gunicorn project-name.wsgi
+
+5. Deploy to Heroku:
+     - Link GitHub repository and Deploy Branch. 
+
+
+## Credits
+
+### Media
+
+All food images were got from [Pexels](https://www.pexels.com/)
+
+### Code
+
+* [Crispy Forms Docs](https://django-crispy-forms.readthedocs.io/en/latest/)
+* [Summernote Github Docs](https://github.com/summernote)
+* [Bootstrap](https://getbootstrap.com/)
+* [Django Docs](https://docs.djangoproject.com/en/4.0/)
+* [w3 Schools](https://www.w3schools.com/)
+* [Stack Overflow](https://stackoverflow.com/)
+
+### Acknowledgements
+
+* The Code Institute Tutor Team for the invaluable help and advice. 
+* My Mentor Richard for all his expertise in guiding me through this project. 
+* Everyone on Slack that helped whenever a question was asked. 
+
+
 
 
 
