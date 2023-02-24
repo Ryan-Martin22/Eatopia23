@@ -122,7 +122,36 @@ Wireframes were used using Balsamiq Wireframes. The aim was to get a basic layou
 * **Register Page** is where new users can create a new account so that they can interact with the site. By creating a username, providing optional email and a required password an account is easily created. 
 * **Logout** is a page for the user to confirm their intention to log out of their account. If the user clicks the sign out button, they are then redirected to the home page.
 
-** Future Features **
+**Future Features**
+
+* **Search Recipes Option**
+
+This would allow users to search for recipes or recipe keywords e.g Chicken recipes. Also if a user enjoys a particular authors recipes they could search for the author name. 
+
+* **Individual Profiles**
+
+This would aloow the user to create a profile about themselves and share information such as cooking tips and preferences. 
+
+* **Video Feature**
+
+This would allow users to upload videos of themselves actually cooking the recipe. Allowing those watching to get a better understanding of cooking the recipe. 
+
+## **Bugs**
+
+* **Bug** - When uploading a recipe I was recieving a TypeError from my views.py file. 
+
+  **Solution** - After discovering that it was a problem occuring during render, I done some research and discovered that the version of Summernote i had installed went out of date. 
+
+* **Bug** - Recieving a NoReverseMatch error when uploading a recipe. 
+
+  **Solution** - After working through my code and adding a recipe in the admin panel. I discovered that whilst adding a recipe through the 'Add Recipe' page, slugs were not been allocated and this was causing the error. I searched on StackOverflow and found a solution and installed Slugify. 
+
+* **Bug** - Recieved a TemplateDoesNotExist error when trying to get my forms to function. 
+
+  **Solution** - After troublehooting and being unable to determine the cause, I reached out to the Tutor team and Rebecca informed me that there was an issue with Crispy Forms 2.0. I then downgraded to a previous version of Crispy Forms and this resolved the error.  
+
+
+
 
 
 
