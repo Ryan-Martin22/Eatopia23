@@ -114,13 +114,15 @@ Wireframes were used using Balsamiq Wireframes. The aim was to get a basic layou
 * **Recipe Form** can be used by logged in users. Here users who holds an account can add their own recipes, and also edit their own recipes. 
 * **Comment Form** is displayed underneath each recipe when viewed in full. Logged in users can comment recipes. 
 * **Comment Section** is where all users, logged in or not can read all comments, who wrote them and when. 
-* **Like/Unlike Button** appears on the recipe site and all logged in users can like/unlike recipes. Number of likes are also displayed for all users to see. 
+* **Like/Unlike Button** appears on the recipe site and all logged in users can like/unlike recipes. Number of likes are also displayed for all users to see so users can determine popularity of recipes.. 
 * **About Page** gives the user information about the topic of the site. 
 * **Recipe Page** is displayed when clicked on a recipe. Here all users, logged in or not, can view details about the recipe. This page also includes features to like and comment if you are a logged in user. If you are the author of the recipe, from here you can be redirected to edit/delete your recipe.  
-* **Edit/Delete recipe** is where the creator of the recipe can edit and/or delete their own recipes. 
-* **Login Page** here users who already have created an account can log in. Users can also choose to be "remembered", a feature so that they do not have to enter their login credentials each time they log in. 
+* **Edit/Delete recipe** is where the creator of the recipe can manage their recipes by edditing or deleting them. 
+* **Login Page** here users who already have created an account can log in. Users can also choose to be "remembered", a feature so that they do not have to enter their login credentials each time they log in, included for better UX. 
 * **Register Page** is where new users can create a new account so that they can interact with the site. By creating a username, providing optional email and a required password an account is easily created. 
-* **Logout** is a page for the user to confirm their wish to log out of their account. If the user clicks the sign out button, they are then redirected to the home page.
+* **Logout** is a page for the user to confirm their intention to log out of their account. If the user clicks the sign out button, they are then redirected to the home page.
+
+** Future Features **
 
 
 
