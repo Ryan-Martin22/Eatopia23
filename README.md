@@ -156,6 +156,45 @@ This would aloow the user to create a profile about themselves and share informa
 
 This would allow users to upload videos of themselves actually cooking the recipe. Allowing those watching to get a better understanding of cooking the recipe. 
 
+# **Testing**
+
+## Testing User Stories
+**User Stories**
+
+*Applies to site users with and/or without account:*
+1.  As a site user I can see a list of recipes so that I can choose which one to view. 
+   * Recipes are clearly visible on the home page. A preview of the recipe is also visible. Recipes are paginated by 6 and if there is more than 6 on a page then a new page is created. 
+2.  As a site user I can click on a recipe so that I can view it in full. 
+   * When a site user clicks a recipe card, the recipe will be displayed in full. The user can now see full ingredients list, instructions and cooking time. The user can aslo see who created the recipe and when it was created. 
+3.  As a site user I can register an account so that I can have access to the site.
+   * The user can register an account by entering a username, email(optional) and password. The user can also choose to be remembered as to not have to enter details every time. 
+4.  As a site user I can like or unlike a recipe so that I can interact with the content.
+   * As a registered user, the individual can like or unlike a recipe to show popularity, this is done by easily clicking the love heart icon. 
+5.  As a site user I can comment recipes so that I can be part of the conversation. 
+   * As a registered user, I can comment on any recipe to share my thoughts with other site users. 
+6.  As a site user I can view the comments for a recipe so that I can see read the conversation.
+   * As a site user, registered or unregistered, I can view all comments on any recipe. 
+7.  As a site user I can view number of likes for a specific recipe so that I can see which recipes are more popular.
+   * As I sight user, registered or unregistered, I can view the likes of a particular recipe either from the recipe card or by clicking into the recipe. 
+8.  As I site user I can read about the site to understand what type of recipes will be available and be encouraged to visit the site again. 
+   * As a site user, I can click into the About section and view what the site is about and what it aims to achieve. 
+9.  As a site user I can create, read, update and delete posts so that I can manage my content. 
+   * As a registered user I can create a recipe of my choosing, read other recipes, update my recipe if I desire and also delete my recipe if I desire. 
+10.  As a site user I can log in/out so that I can interact with the site.
+   * as a site user I can log in to my account using my username and password, and I can sign out buy clicking the log out button on the navigation bar. 
+
+*Applies to site Admin/SuperUser:*
+1.  As Admin I can tell site users about delicious,budget friendly recipes so that users will be encouraged to visit the site again.
+   * By having an eye catching welcome page and by having an about page, I can encourage users to view what the page is aiming to achieve and enable them to view recipes.
+2.  As Admin I can create, read, update and delete posts so that I can manage my content.
+   * As an Admin it is a key responsibily to provide ey cathing, delicious recipes to get users involved and wanting to use the site. 
+3.  As Admin I can delete recipes if inappropiate so that the content of the site is relevant.
+   * As admin I can delete any recipe that is not suitable for the page as to keep with the ethos and goals of the site. 
+
+
+
+
+
 ## **Bugs**
 
 * **Bug** - When uploading a recipe I was recieving a TypeError from my views.py file. 
