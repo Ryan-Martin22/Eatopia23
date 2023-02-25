@@ -112,35 +112,35 @@ Wireframes were used using Balsamiq Wireframes. The aim was to get a basic layou
 
 * **Home Page Image** is to greet the site user and instantly provide the purpose of the site. 
 * **Home Page Welcome Text** is to give immediate guidance to the site user. If the user is logged in they will be greated by their username, if not there are links to Login/Register an account.
-![Home page image and text](/static/images/welcome.png) 
+![Home page image and text](/static/images/welcome1.png) 
 
 * **Recipe Cards** are presented on the home page. The 
 cards are paginated by six, i.e if there are more than six recipes on the site they will be displayed on another site. Arrows will point the user in the right direction for good user experience. The cards hold information of the recipe title, author, created on, number of likes and an image. If the user has not chosen a specifik image a placeholder image will be displayed. 
-![Recipe Cards](/static/images/recipe-cards.png)
+![Recipe Cards](/static/images/recipe-card1.png)
 
 * **Recipe Form** can be used by logged in users. Here users who holds an account can add their own recipes, and also edit their own recipes.
-![Add Recipe](/static/images/add-recipe.png) 
+![Add Recipe](/static/images/recipe-form1.png) 
 
 * **Comment Form** is displayed underneath each recipe when viewed in full. Logged in users can comment recipes. 
-![Comment](/static/images/comment.png)
+![Comment](/static/images/comments.png)
 
 * **Comment Section** is where all users, logged in or not can read all comments, who wrote them and when. 
 * **Like/Unlike Button** appears on the recipe site and all logged in users can like/unlike recipes. Number of likes are also displayed for all users to see so users can determine popularity of recipes.. 
 * **About Page** gives the user information about the topic of the site. 
-![About Page](/static/images/about.png)
+![About Page](/static/images/about1.png)
 
 * **Recipe Page** is displayed when clicked on a recipe. Here all users, logged in or not, can view details about the recipe. This page also includes features to like and comment if you are a logged in user. If you are the author of the recipe, from here you can be redirected to edit/delete your recipe.  
 * **Edit/Delete recipe** is where the creator of the recipe can manage their recipes by editing or deleting them. 
-![Edit/delete](/static/images/manage.png)
+![Edit/delete](/static/images/manage1.png)
 
 * **Login Page** here users who already have created an account can log in. Users can also choose to be "remembered", a feature so that they do not have to enter their login credentials each time they log in, included for better UX.
-![Login](/static/images/sign-in.png) 
+![Login](/static/images/sign-in1.png) 
 
 * **Register Page** is where new users can create a new account so that they can interact with the site. By creating a username, providing optional email and a required password an account is easily created. 
-![Register](/static/images/sign-up.png)
+![Register](/static/images/sign-up1.png)
 
 * **Logout** is a page for the user to confirm their intention to log out of their account. If the user clicks the sign out button, they are then redirected to the home page.
-![Logout](/static/images/sign-out.png)
+![Logout](/static/images/sign-out1.png)
 
 **Future Features**
 
