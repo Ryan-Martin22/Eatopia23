@@ -368,6 +368,13 @@ This would allow users to upload videos of themselves actually cooking the recip
 * Result: When clicking Logout the user is redirected to Logout page and asked to confirm that they wish to log out. When Log Out button is clicked the user is logged out and redirected to home page. 
 * Verdict: Code functions as intended.
 
+### Defensive Design
+
+* Expected Outcome: As an unregistered user I cannot delte or edit recipes.
+* Test: Try to edit and delete recipes when not a registered user. 
+* Result: When clicking into a recipe there is not button or way for me to edit or delet other users recipes. 
+* Verdict: Code functioned as intended. 
+
 ## Automated Testing
 
 ### Code Validation
