@@ -37,9 +37,9 @@
                             <div class="image-container">
                                 {% if "placeholder" in recipemodel.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                                    src=https://res.cloudinary.com/dvfyeucsp/image/upload/v1675266749/cld-sample-4.jpg>
                                 {% else %}
-                                <img class="card-img-top" src=" {{ recipemodel.featured_image.url }}">
+                                <img class="card-img-top" src=" {{ recipemodel.featured_image.url }}" alt="{{ recipemodel.slug }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ recipemodel.author }}</p>

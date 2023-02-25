@@ -1,11 +1,11 @@
 # **Eatopia** 
 ![Eatopia](/static/images/am-i-responsive.png)
 # **Eatopia**
-Eatopia is a website where people can share their favourite recipes for others to try and also where they can find tasty recipes to use themselves. Users can create an account and create recipes, view other users recipes and also comment and like on recipes. 
+Eatopia is a website where people can share their favourite recipes for others to try and also where they can find tasty recipes to use themselves.The goal of the site is to enable users to cook tasty bedget friendly recipes and also share their favourite recipes. Users can create an account and create recipes, view other users recipes and also comment and like on recipes. 
 
 [View live project here](https://eatopia.herokuapp.com/)
 
-## **Introduction** 
+## **Planning** 
 
 When initially planning this project I first had to decide on what features the user would need so that I could I could decide on what type of site I was making. I then constructed wireframes to format the design of the site. I then turned my focus to the database models. Planning and preparation was key when constructing this site. 
 
@@ -15,7 +15,7 @@ My goal for this site were to create a user friendly website were people can get
 
 ## **Site Owner Goals**
 
-* Provide the user with and easy to use professional website.
+* Provide the user with an easy to use professional website.
 * Interact with recipes the may be interested in.
 * Provide recipes for users that are budget friendly. 
 
